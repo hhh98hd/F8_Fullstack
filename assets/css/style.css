@@ -6,3 +6,46 @@
 3. Color
 4. Appearance
 */
+
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    height: 46px;
+    background-color: black;
+}
+
+#nav {
+}
+
+#nav li {
+    display: inline-block;
+
+}
+
+#nav li a {
+    display: inline-block;
+    padding-left: 24px;
+    padding-right: 24px;
+    line-height: 46px;
+
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#nav li:hover a {
+    color: black;
+    background-color: rgb(211, 208, 203);
+}
+
+.sub_nav {
+    display: none;
+}
