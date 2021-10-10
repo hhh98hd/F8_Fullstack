@@ -26,6 +26,7 @@ html {
 }
 
 #nav {
+    display: inline-block;
 }
 
 #nav li {
@@ -78,6 +79,30 @@ html {
     text-decoration: none;
     font-size: 15px;
     line-height: 38px;
+}
+
+#nav .nav-down-icon {
+    font-size: 12px;
+}
+
+#search {
+    width: 62px;
+    height: 46px;
+    padding: 0 24px;
+    float: right;
+    background-color: black;
+}
+
+#search:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .nav-search-icon {
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 46px;
 }
 
 #slider {
