@@ -19,11 +19,12 @@ html {
 }
 
 #header {
-    left: 0;
+    width: 100%;
     height: 46px;
-    top: 0;
-    right: 0;
+    z-index: 1;
     position: fixed;
+    left: 0;
+    top: 0;
     background-color: black;
 }
 
@@ -103,12 +104,36 @@ html {
 #header .nav-search-icon {
     color: white;
     font-size: 15px;
-    font-weight: bolder;
+    font-weight: bold;
     line-height: 46px;
 }
 
 #slider {
     margin-top: 46px;
+    padding-top: 50%;
+    background: url("/assets/img/slider/chicago.jpg") top center / cover no-repeat;
+    position: relative;
+}
+
+.sider-img-desc {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 48px;
+    text-align: center;
+    color: white;
+}
+
+.sider-img-desc > h3 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.sider-img-desc  > p {
+    font-size: 15px;
+    font-weight: bolder;
 }
 
 #content {
