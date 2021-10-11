@@ -22,6 +22,12 @@ html {
     clear: both;
 }
 
+.margin-auto {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #header {
     width: 100%;
     height: 46px;
@@ -142,10 +148,9 @@ html {
 }
 
 #content {
-    width: 800px;
-    height: 1600px;
+    /* width: 800px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
 }
 
 #about {
@@ -206,6 +211,27 @@ html {
     border-radius: 4px;
 }
 
-#footer {
+#bg {
+    background-color: black;
+}
 
+#tour {
+    padding: 64px 16px;
+    background-clip: padding-box;
+    background-color: black;
+}
+
+#tour > .section-title > p,
+#tour > .section-title > h2 {
+    color: white;
+}
+
+#date-list > li {
+    height: 22px;
+    padding: 8px 16px;
+    background-color: white;
+}
+
+#footer {
+    
 }
