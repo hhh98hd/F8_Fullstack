@@ -23,7 +23,7 @@ html {
 }
 
 .margin-auto {
-    width: 800px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -148,9 +148,6 @@ html {
 }
 
 #content {
-    /* width: 800px;
-    margin-left: auto;
-    margin-right: auto; */
 }
 
 #about {
@@ -227,9 +224,93 @@ html {
 }
 
 #date-list > li {
-    height: 22px;
+    height: 39px;
     padding: 8px 16px;
+    list-style-type: none;
+    color: #757575;
     background-color: white;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.date-sold-out {
+    padding: 0 8px;
+    margin-left: 16px;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1.5;
+    color: white;
+    background-color: #f44336;
+}
+
+.date-avail {
+    float: right;
+    margin-right: 16px;
+    padding: 0 8px;
+    border-radius: 100%;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#place_list {
+    padding: 32px 8px;
+    margin: 0 -16px;
+}
+
+.place { 
+    width: 33.33333%;
+    float: left;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.place > img {
+    display: block;
+    width: 100%;
+    opacity: 1.00;
+}
+
+.place > img:hover {
+    opacity: 0.60;
+}
+
+.place-desc {
+    padding: 0.150px 16px;
+    background-color: white;
+}
+
+.place-desc p {
+    margin: 15px 0;
+}
+
+.place-date {
+    margin: 15px 0;
+    opacity: 0.60;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.place-info {
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.place-desc .button-buy {
+    height: 38px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.place-desc .button-buy:hover {
+    color: black;
+    background-color: #ccc;
 }
 
 #footer {
