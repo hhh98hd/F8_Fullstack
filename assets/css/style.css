@@ -321,7 +321,7 @@ html {
     line-height: 1.5;
 }
 
-.place-desc .button-buy {
+.button-buy {
     height: 38px;
     padding: 8px 16px;
     margin-bottom: 16px;
@@ -331,14 +331,13 @@ html {
     cursor: pointer;
 }
 
-.place-desc .button-buy:hover {
+.button-buy:hover {
     color: black;
     background-color: #ccc;
 }
 
 #contact {
     padding: 64px 16px;
-    height: 1000px;
 }
 
 #contact-container {
@@ -364,7 +363,27 @@ html {
 }
 
 #form-row-1 {
-    
+    margin: 0 -8px;
+}
+
+.input-container {
+    margin-bottom: 8px;
+    width: 50%;
+    padding: 0 8px;
+    float: left;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 8px;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+#contact-form .button-buy {
+    float: right;
+    margin-top: 16px;
 }
 
 #footer {
