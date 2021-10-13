@@ -14,6 +14,7 @@
     box-sizing: border-box;
 }
 
+/* ################ PAGE ################ */
 html {
     font-family: "Lato", sans-serif;
 }
@@ -393,11 +394,36 @@ input {
 }
 
 #footer {
-    height: 500px;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 64px 16px;
+
 }
 
-#icon-container .footer-icon {
-    height: 24px;
-    color: red;
+#icon-container {
     font-size: 24px;
+}
+
+.footer-icon {
+    opacity: 0.60;
+}
+
+.footer-icon:hover {
+    opacity: 0.30;
+}
+
+#footer p {
+    opacity: 0.60;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#footer a {
+    color: black;
+}
+
+/* ################ TICKET MODAL ################ */
+
+#ticket-header {
+    padding: 32px 16px;
 }
