@@ -206,6 +206,7 @@
       <div id="icon-container">
         <i class="footer-icon fa fa-facebook-official" aria-hidden="true"></i>
         <i class="footer-icon fa fa-instagram" aria-hidden="true"></i>
+        <i class="footer-icon fa fa-snapchat" aria-hidden="true"></i>
         <i class="footer-icon fa fa-pinterest-p" aria-hidden="true"></i>
         <i class="footer-icon fa fa-twitter" aria-hidden="true"></i>
         <i class="footer-icon fa fa-linkedin" aria-hidden="true"></i>
@@ -219,8 +220,48 @@
   </div>
 
   <div id="ticket-modal">
-    <div id="ticket-header">
-      <i class="fa fa-suitcase" aria-hidden="true"></i>
+    <div id="ticket-container">
+      <div id="ticket-header">
+        <div style="margin: 10px 0;">
+          <i class="fa fa-suitcase" aria-hidden="true"></i>
+          <h2>Tickets</h2>
+        </div>
+  
+        <div id="ticket-x">
+          x
+        </div>
+      </div>
+  
+      <div id="ticket-content">
+        <label for="input-ticket-num" class="ticket-label">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          Tickets, $15 per person
+        </label>
+        <input id="input-ticket-num" type="text" placeholder="How many?">
+  
+        <label for="input-ticket-email" class="ticket-label">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          Send To
+        </label>
+        <input id="input-ticket-email" type="text" placeholder="Enter email">
+  
+        <div id="ticket-pay">
+          <button>
+            PAY
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </button>
+        </div>
+  
+        <button id="ticket-close">
+          Close
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+  
+        <p>
+          Need
+          <a href="">help?</a>
+        </p>
+      </div>
     </div>
   </div>
 </body>

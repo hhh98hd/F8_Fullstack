@@ -19,6 +19,10 @@ html {
     font-family: "Lato", sans-serif;
 }
 
+body {
+    position: relative;
+}
+
 .clear-float {
     clear: both;
 }
@@ -423,7 +427,125 @@ input {
 }
 
 /* ################ TICKET MODAL ################ */
+#ticket-modal {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding-top: 100px;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#ticket-container {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #ticket-header {
     padding: 32px 16px;
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: #009688;
+}
+
+#ticket-header > div > i {
+    margin-right: 16px;
+    font-size: 30px;
+}
+
+#ticket-header > div > h2 {
+    display: inline;
+    letter-spacing: 4px;
+    font-size: 30px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+}
+
+#ticket-x {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8px 16px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#ticket-x:hover {
+    color: black;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#ticket-content {
+    padding: 0.150px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.ticket-label {
+    margin: 15px 0;
+    display: block;
+}
+
+#ticket-content {
+    background-color: white;
+}
+
+#ticket-content > input {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+}
+
+#ticket-pay {
+    margin: 16px 0;
+    padding: 16px;
+    color: white;
+    background-color: #009688;
+    text-align: center;
+}
+
+#ticket-pay > button {
+    color: white;
+    background-color: #009688;
+    font-size: 15px;
+    line-height: 1.5;
+    border: none;
+}
+
+#ticket-pay:hover, 
+#ticket-pay:hover button, 
+#ticket-close:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #ccc;
+}
+
+#ticket-close {
+    margin: 16px 0;
+    padding: 8px 16px;
+    color: white;
+    background-color: #f44336;
+    border: none;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#ticket-content > p {
+    float: right;
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#ticket-content > p > a {
+    color: #2196F3;
+    font-size: 15px;
+    line-height: 1.5;
 }
