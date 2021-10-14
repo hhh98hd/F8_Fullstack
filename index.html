@@ -121,7 +121,7 @@
                 <p class="place-info">
                   Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <button class="button-buy">Buy Tickets</button>
+                <button class="button-buy js-button-buy">Buy Tickets</button>
               </div>
             </div>
 
@@ -133,7 +133,7 @@
                 <p class="place-info">
                   Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <button class="button-buy">Buy Tickets</button>
+                <button class="button-buy js-button-buy">Buy Tickets</button>
               </div>
             </div>
 
@@ -145,7 +145,7 @@
                 <p class="place-info">
                   Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <button class="button-buy">Buy Tickets</button>
+                <button class="button-buy js-button-buy">Buy Tickets</button>
               </div>
             </div>
 
@@ -264,6 +264,34 @@
       </div>
     </div>
   </div>
-</body>
 
+  <script>
+    const buyBtns = document.querySelectorAll(".js-button-buy");
+    const ticketModal = document.querySelector("#ticket-modal");
+    const xBtn = document.querySelector("#ticket-x");
+    const closeBtn = document.querySelector("#ticket-close");
+    const ticketContainer = document.querySelector("#ticket-container");
+
+    function displayBuyTicket()
+    {
+      ticketModal.style.display = "block";
+    }
+
+    function hideBuyTicket()
+    {
+      ticketModal.style.display = "none";
+    }
+
+    for (var btn of buyBtns)
+    {
+      btn.addEventListener("click", displayBuyTicket);
+    }
+    xBtn.addEventListener("click", hideBuyTicket);
+    closeBtn.addEventListener("click", hideBuyTicket);
+    ticketContainer.addEventListener("click", function(event) {
+      event.stopPropagation();
+    });
+    ticketModal.addEventListener("click", hideBuyTicket);
+  </script>
+</body>
 </html>
