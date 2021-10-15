@@ -17,6 +17,7 @@
 /* ################ PAGE ################ */
 html {
     font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
