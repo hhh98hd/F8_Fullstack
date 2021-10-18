@@ -1,0 +1,38 @@
+@media (max-width: 739px) {
+  #header {
+    overflow: hidden;
+  }
+
+  #nav {
+    width: 100%;
+    background-color: black;
+  }
+
+  #nav > li {
+    display: block;
+  }
+
+  #nav > li > a {
+    width: 100%;
+  }
+
+  #menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+  }
+
+  #menu:hover {
+    cursor: pointer;
+    background-color: rgb(211, 208, 203);
+  }
+
+  #menu:hover > i {
+    color: black;
+  }
+
+  #search {
+    display: none;
+  }
+}
