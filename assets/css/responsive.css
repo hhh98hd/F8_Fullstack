@@ -12,7 +12,7 @@
     display: block;
   }
 
-  #nav > li > a {
+  #nav > #nav-home ~ li > a {
     width: 100%;
   }
 
