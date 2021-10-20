@@ -17,7 +17,7 @@
     <div id="header">
       <!-- Begin Nav -->
       <ul id="nav">
-        <li id="nav-home"><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="#about">Band</a></li>
         <li><a href="#tour">Tour</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -278,6 +278,7 @@
     const ticketContainer = document.querySelector("#ticket-container");
     const menuBtn = document.querySelector("#menu");
     const headerDiv = document.querySelector("#header");
+    const defaultHeaderHeight = headerDiv.clientHeight;
 
     function displayBuyTicket() {
       ticketModal.style.display = "block";
@@ -290,6 +291,7 @@
     for (var btn of buyBtns) {
       btn.addEventListener("click", displayBuyTicket);
     }
+
     xBtn.addEventListener("click", hideBuyTicket);
     closeBtn.addEventListener("click", hideBuyTicket);
     ticketContainer.addEventListener("click", function (event) {
@@ -297,11 +299,14 @@
     });
     ticketModal.addEventListener("click", hideBuyTicket);
     menuBtn.addEventListener("click", function () {
-      if (headerDiv.style.overflow == "visible") {
-        headerDiv.style.overflow = "hidden"
+      if(headerDiv.clientHeight === defaultHeaderHeight)
+      {
+        headerDiv.style.height = "auto";
+        console.log(headerDiv.clientHeight);
       }
-      else {
-        headerDiv.style.overflow = "visible"
+      else
+      {
+        headerDiv.style.height = null;
       }
     });
   </script>

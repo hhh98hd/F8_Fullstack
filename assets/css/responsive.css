@@ -9,18 +9,25 @@
   }
 
   #nav > li {
+    position: relative;
     display: block;
   }
 
-  #nav > #nav-home ~ li > a {
+  #nav > li:first-child > a {
+    width: auto;
+  }
+
+  #nav > li > a {
     width: 100%;
   }
 
   #menu {
+    height: 46px;
     position: absolute;
     top: 0;
     right: 0;
     display: block;
+    line-height: 46px;
   }
 
   #menu:hover {
@@ -34,5 +41,9 @@
 
   #search {
     display: none;
+  }
+
+  #ticket-container {
+    max-width: 100%;
   }
 }
