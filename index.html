@@ -278,7 +278,8 @@
     const ticketContainer = document.querySelector("#ticket-container");
     const menuBtn = document.querySelector("#menu");
     const headerDiv = document.querySelector("#header");
-    const defaultHeaderHeight = headerDiv.clientHeight;
+    var defaultHeaderHeight = headerDiv.clientHeight;
+    var mobileMenuItems = document.querySelectorAll('#nav > li  a[href*="#"]');
 
     function displayBuyTicket() {
       ticketModal.style.display = "block";
@@ -302,13 +303,27 @@
       if(headerDiv.clientHeight === defaultHeaderHeight)
       {
         headerDiv.style.height = "auto";
-        console.log(headerDiv.clientHeight);
       }
       else
       {
         headerDiv.style.height = null;
       }
     });
+
+    for(var i = 0; i < mobileMenuItems.length; i++)
+    {
+      var item = mobileMenuItems[i];
+    
+      item.onclick = function() {
+        var isParentNav = this.nextElementSibling && this.nextElementSibling.classList.contains("sub_nav");
+
+        if(!isParentNav)
+        {
+          headerDiv.style.height = null;
+        }
+      }
+    }
+
   </script>
 </body>
 
