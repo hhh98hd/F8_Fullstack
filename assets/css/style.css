@@ -365,6 +365,7 @@ body {
     width: 50%;
     float: left;
     margin-bottom: 16px;
+    line-height: 2.0;
 }
 
 #contact-info .contact-icon {
@@ -396,6 +397,7 @@ input {
     padding: 8px 8px;
     font-size: 15px;
     line-height: 40px;
+    border: 1px solid #ccc;
 }
 
 #contact-form .button-buy {
@@ -416,12 +418,9 @@ input {
 
 }
 
-#icon-container {
-    font-size: 24px;
-}
-
 .footer-icon {
     opacity: 0.60;
+    font-size: 24px;
 }
 
 .footer-icon:hover {

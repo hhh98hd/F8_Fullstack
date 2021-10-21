@@ -1,4 +1,4 @@
-@media (max-width: 750px) {
+@media (max-width: 46.1875em) {
   #header {
     overflow: hidden;
   }
@@ -38,6 +38,10 @@
     line-height: 48px;
     color: white;
   }
+
+  #nav .sub_nav li:hover a {
+    color: black;
+  }
  
   #menu {
     height: 46px;
@@ -61,7 +65,58 @@
     display: none;
   }
 
+  .member {
+    width: 100%;
+    float: none;
+  }
+
+  .member > img {
+    width: 60%;
+    margin-bottom: 16px;
+  }
+
+  .place { 
+    width: 100%;
+    float: none;
+  }
+
+  #contact-form,
+  #contact-info {
+    width: 100%;
+    float: none;
+  }
+
+  #form-row-1 > .input-container {
+    width: 100%;
+    float: none;
+  }
+
+  #form-row-1 > .input-container:first-child {
+    margin-bottom: 0;
+  }
+
+  .button-buy {
+    width: 100%;
+  }
+
   #ticket-container {
-    max-width: 100%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .button-buy {
+    height: 48px;
+    padding: 15px 16px;
+  }
+
+  #footer {
+    font-size: 32px;
+  }
+
+  #footer i {
+    margin: 0 8px;
   }
 }
