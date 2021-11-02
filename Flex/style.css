@@ -151,6 +151,9 @@ body {
     margin: 36px auto 0 auto;
     padding: 32px 0;
     height: 320px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
     background-color: #fff;
 }
 
@@ -160,6 +163,7 @@ body {
     text-align: center;
     height: var(--percent);
     background-color: #EF5122;
+    animation: growth ease-in 1.1s;
 }
 
 /* End */
@@ -168,6 +172,7 @@ body {
     padding: 32px 0;
     max-width: 740px;
     min-height: 360px;
+    display: flex;
 }
 
 .the-end__first {
@@ -176,14 +181,29 @@ body {
 }
 
 .the-end__second {
+    display: flex;
+    flex-direction: column;
 }
 
 .the-end__second-one {
+    flex: 1;
     padding: 4px 16px;
     background-color: rgb(227, 192, 214);
 }
 
 .the-end__second-two {
+    flex: ;
     padding: 4px 16px;
     background-color: rgb(192, 210, 227);
+}
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        height: calc(var(--percent) - 50%);
+    }
+    to {
+        opacity: 1;
+        height: calc(var(--percent);
+    }
 }
