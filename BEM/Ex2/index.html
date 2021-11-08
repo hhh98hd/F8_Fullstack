@@ -13,39 +13,91 @@
 </head>
 
 <body>
-    <div>
-        <!-- Success -->
-        <div class="toast toast--success">
-            <div class="toast__icon">
-                <i class="fas fa-check-circle"></i>
-            </div>
+    <div id="toast-layout"></div>
 
-            <div class="toast__body">
-                <h3 class="toast__title">Thành công!</h3>
-                <p class="toast__msg">Bạn đã đăng ký thành công tài khoản tại F8.</p>
-            </div>
-
-            <div class="toast__close">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-
-        <!-- Failure -->
-        <div class="toast toast--failure">
-            <div class="toast__icon">
-                <i class="fas fa-check-circle"></i>
-            </div>
-
-            <div class="toast__body">
-                <h3 class="toast__title">Thất bại!</h3>
-                <p class="toast__msg">Có lỗi xảy ra, vui lòng liên hệ quản trị viên.</p>
-            </div>
-
-            <div class="toast__close">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
+    <div id="btn-layout">
+        <div class="btn btn--success">SHOW SUCCESS TOAST</div>
+        <div class="btn btn--failure">SHOW FAIlURE TOAST</div>
     </div>
 </body>
+
+<script>
+    function showToast({type = 'success', title = 'Title', msg = 'Message', duration = 3000}) {
+        var toastLayout = document.getElementById('toast-layout');
+        if(toastLayout)
+        {
+            var icon;
+            if(type === 'success')
+            {
+               icon = 'fas fa-check-circle';
+            }
+            else if(type == 'failure')
+            {
+                icon = 'fas fa-exclamation-circle'
+            }
+            var delay = (duration / 1000).toFixed(1);
+
+            var toast = document.createElement('div');
+            toast.classList.add('toast');
+            toast.classList.add(`toast--${type}`);
+
+            toast.innerHTML = `
+                <div class="toast__icon">
+                    <i class="${icon}"></i>
+                </div>
+
+                <div class="toast__body">
+                    <h3 class="toast__title">${title}</h3>
+                    <p class="toast__msg">${msg}</p>
+                </div>
+
+                <div class="toast__close">
+                    <i class="fas fa-times"></i>
+                </div>`;
+
+            toast.style.animation = `slideInFromRight ease 0.3s forwards,
+                                     fadeOut linear 1s ${delay}s forwards`;
+
+            toastLayout.appendChild(toast);
+
+            var timer = setTimeout(function() {
+                toastLayout.removeChild(toast);
+            }, duration + 1000);
+
+            toast.addEventListener('click', function(event) {
+                if(event.target.closest('.toast__close'))
+                {
+                    clearTimeout(timer);
+                    toastLayout.removeChild(toast);
+                }
+            });
+        }
+        else
+        {
+            console.warn('No toast container found!');
+            console.warn("Please make sure that the container's name is 'toast-layout'");
+        }
+    }
+
+    function showSuccessToast() {
+        showToast({type: 'success', 
+               title: 'Thành công!',
+               msg: 'Bạn đã đăng ký thành công tài khoản tại F8.',
+               duration: 8000});
+    }
+
+    function showFailureToast() {
+        showToast({type: 'failure', 
+               title: 'Thất bại!',
+               msg: 'Có lỗi xảy ra, vui lòng liên hệ quản trị viên.',
+               duration: 8000});
+    }
+
+    var successBtn = document.querySelector('.btn--success');
+    var failureBtn = document.querySelector('.btn--failure');
+    successBtn.addEventListener('click', showSuccessToast);
+    failureBtn.addEventListener('click', showFailureToast);
+
+</script>
 
 </html>
