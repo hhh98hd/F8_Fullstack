@@ -63,6 +63,11 @@
             timeBar.style.animation = `timeDown linear ${delay}s forwards`;
             toast.appendChild(timeBar);
 
+            var timeBar = document.createElement('div');
+            timeBar.classList.add('toast__timeout-bar');
+            timeBar.style.animation = `timeDown linear ${delay}s forwards`;
+            toast.appendChild(timeBar);
+
             toastLayout.appendChild(toast);
 
             var timer = setTimeout(function() {
