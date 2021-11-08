@@ -26,14 +26,14 @@ body > div {
 
 .toast {
     display: flex;
-    margin-bottom: 2px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
     padding: 20px 0px;
     align-items: center;
     background-color: white;
-    border-radius: 2px;
-    border-left: 4px solid;
+    border-radius: 6px;
+    border-left: 6px solid;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
-    transition: all linear 1s;
 }
 
 @keyframes slideInFromRight {
@@ -81,6 +81,23 @@ body > div {
 .toast__close:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+
+.toast__timeout-bar {
+  width: 100%;
+  height: 7px;
+  background-color: rgb(212, 208, 208);
+  align-self: flex-end;
+  transform: translateY(20px);
+}
+
+@keyframes timeDown {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
 }
 
 .toast--success {

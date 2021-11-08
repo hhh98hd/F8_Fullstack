@@ -31,7 +31,7 @@
             {
                icon = 'fas fa-check-circle';
             }
-            else if(type == 'failure')
+            else if(type === 'failure')
             {
                 icon = 'fas fa-exclamation-circle'
             }
@@ -56,13 +56,18 @@
                 </div>`;
 
             toast.style.animation = `slideInFromRight ease 0.3s forwards,
-                                     fadeOut linear 1s ${delay}s forwards`;
+                                     fadeOut linear 0.5s ${delay}s forwards`;
+
+            var timeBar = document.createElement('div');
+            timeBar.classList.add('toast__timeout-bar');
+            timeBar.style.animation = `timeDown linear ${delay}s forwards`;
+            toast.appendChild(timeBar);
 
             toastLayout.appendChild(toast);
 
             var timer = setTimeout(function() {
                 toastLayout.removeChild(toast);
-            }, duration + 1000);
+            }, duration + 500);
 
             toast.addEventListener('click', function(event) {
                 if(event.target.closest('.toast__close'))
