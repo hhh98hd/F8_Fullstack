@@ -10,6 +10,7 @@
 
 .header__nav-list {
     padding-left: 0;
+    margin-top: 8px;
 }
 
 .header__nav-list-item {
@@ -18,10 +19,51 @@
     list-style: none;
 }
 
+.header__nav-icon-link {
+    display: inline-flex;
+    color: white;
+    text-decoration: none;
+    align-items: center;
+}
+
+.header__nav-icon {
+    font-size: 1.8rem;
+    align-items: center;
+    margin: 0 4px;
+}
+
 .header__nav-list-item,
-.header__nav-list-item > a {
+.header__nav-list-item-link {
     color: white;
     font-size: 1.4rem;
     font-weight: 300;
     text-decoration: none;
+}
+
+.header__nav-icon-link:hover,
+.header__nav-icon:hover,
+.header__nav-list-item:hover,
+.header__nav-list-item-link:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header__nav-list-item,
+.header__nav-list-item-link,
+.header__nav-icon-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__nav-list-item--bold {
+    font-weight: 500;
+}
+
+.header__nav-list-item--ver-bar {
+    border-right: 2px solid #f86c5c;
+}
+
+.header__nav-list-item:hover .header__nav-no-hover-effect {
+    color: white;
+    cursor: default;
 }
