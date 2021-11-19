@@ -9,8 +9,13 @@
 html {
     font-size: 62.5%;
     line-height: 1.6rem;
+    font-weight: 300;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+}
+
+ul {
+    padding-left: 0;
 }
 
 .grid {
