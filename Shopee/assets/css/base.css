@@ -1,5 +1,6 @@
 :root {
     --text-color: #333;
+    --primary-color: #ee4d2d;
 }
 
 * {
@@ -7,6 +8,7 @@
 }
 
 html {
+    text-decoration: none;
     font-size: 62.5%;
     line-height: 1.6rem;
     font-weight: 300;
@@ -16,6 +18,15 @@ html {
 
 ul {
     padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 .grid {

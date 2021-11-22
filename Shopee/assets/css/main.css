@@ -13,7 +13,6 @@
     display: flex;
     align-items: center;
     color: white;
-    list-style-type: none;
     font-size: 1.4rem;
 }
 
@@ -42,6 +41,7 @@
 }
 
 .header__nav-icon {
+    margin-left: 10px;
     margin-right: 4px;
 }
 
@@ -53,7 +53,10 @@
 
 .header__nav-link {
     color: white;
-    text-decoration: none;
+}
+
+.header__nav-item--bold.header__nav-item--border {
+    margin-left: 20px;
 }
 
 .header__nav-link:hover,
@@ -66,7 +69,7 @@
 
 .header__qr {
     width: 186px;
-    top: 130%;
+    top: 150%;
     display: none;
     position: absolute;
     border-radius: 2px;
@@ -110,6 +113,79 @@
 
 .header__qr-store-img {
     height: 18px;
+}
+
+.header__notify {
+    width: 404px;
+    position: absolute;
+    top: 150%;
+    right: 0;
+    border: 1px solid #d3d3d3;
+    background-color: white;
+}
+
+.header__notify-item {
+    background-color: rgba(238, 77, 45, 0.08);
+}
+
+.header__notify-item--seen {
+    background-color: white;
+}
+
+.header__notify-header {
+    height: 40px;
+    background-color: white;
+}
+
+.header__notify-header h3 {
+    margin: 0 0 0 12px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #999;
+    line-height: 40px;
+}
+
+.header__notify-list {
+    padding-left: 0;
+}
+
+.header__notify-link {
+    display: flex;
+}
+
+.header__notify-icon {
+    width: 48px;
+    height: 48px;
+    margin-top: 10px;
+    margin-left: 12px;
+}
+
+.header__notify-body {
+    margin-left: 6px;
+    padding-right: 20px;
+}
+
+.header__notify-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.header__notify-description {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.header__notify-footer {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
 }
 
 .no-hover-effect {
