@@ -120,12 +120,51 @@
     position: absolute;
     top: 150%;
     right: 0;
+    display: none;
     border: 1px solid #d3d3d3;
     background-color: white;
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotifyGrow ease-in 0.25s;
+    will-change: opacity, transform;
+}
+
+@keyframes headerNotifyGrow {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header__notify::before {
+    position: absolute;
+    right: 23px;
+    top: -23px;
+    border-width: 14px 16px;
+    border-style: solid;
+    content: "";
+    border-color: transparent transparent white transparent;
+}
+
+.header__notify::after {
+    width: 90px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -14px;
+    content: "";
+}
+
+.header__nav-item:hover .header__notify {
+    display: block;
 }
 
 .header__notify-item {
-    background-color: rgba(238, 77, 45, 0.08);
+    background-color: rgba(240, 161, 145, 0.08);
 }
 
 .header__notify-item--seen {
@@ -135,6 +174,7 @@
 .header__notify-header {
     height: 40px;
     background-color: white;
+    cursor: default;
 }
 
 .header__notify-header h3 {
@@ -169,7 +209,7 @@
     margin-top: 10px;
     margin-bottom: 4px;
     font-size: 1.4rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--text-color);
 }
 
@@ -188,7 +228,10 @@
     color: var(--text-color);
 }
 
+.header__notify-footer:hover {
+    background-color: rgba(194, 183, 183, 0.5);
+}
+
 .no-hover-effect {
     cursor: default;
-    color: white;
 }
