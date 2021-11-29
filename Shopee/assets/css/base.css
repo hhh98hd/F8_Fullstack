@@ -1,6 +1,7 @@
 :root {
     --text-color: #333;
     --primary-color: #ee4d2d;
+    --btn-hover-color: #f06347;
 }
 
 * {
@@ -27,6 +28,10 @@ li {
 a {
     color: var(--text-color);
     text-decoration: none;
+}
+
+h3 {
+    margin: 0;
 }
 
 .grid {
@@ -78,4 +83,63 @@ a {
     margin: auto;
     border-radius: 4px;
     background-color: white;
+}
+
+.auth-form__header {
+    width: 396px;
+    height: 68px;
+    padding: 22px 30px;
+    line-height: 24px;
+    font-size: 1.4rem;
+}
+
+.auth-form__form {
+    padding-left: 32px;
+}
+
+.auth-form__input {
+    width: 336px;
+    height: 40px;
+    margin-bottom: 30px;
+    padding-left: 18px;
+    border-width: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: rgb(226, 226, 226);
+    font-size: 1.4rem;
+}
+
+.auth-form__input::placeholder {
+    color: rgb(226, 226, 226);
+    font-size: 1.4rem;
+}
+
+.auth-form__btn-submit {
+    width: 336px;
+    height: 40px;
+    margin-bottom: 32px;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    color: white;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.auth-form__btn-submit:hover {
+    background-color: var(--btn-hover-color);
+    animation: hoverChangeColor ease-in 0.2s;
+}
+
+@keyframes hoverChangeColor {
+    from {
+        background-color: var(--primary-color);
+    }
+    to {
+        background-color: var(--btn-hover-color);
+    }
+}
+
+.auth-form__seperator {
+    color: rgb(150, 150, 150);
 }
