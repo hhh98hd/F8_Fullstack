@@ -2,6 +2,8 @@
     --text-color: #333;
     --primary-color: #ee4d2d;
     --btn-hover-color: #f06347;
+    --grow-from: 0.7;
+    --grow-to: 1;
 }
 
 * {
@@ -58,40 +60,50 @@ h3 {
     }
 }
 
-
+@keyframes growUp {
+    from {
+        transform: scale(var(--grow-from));
+    }
+    to {
+        transform: scale(var(--grow-to));
+    }
+}
 
 /*** MODAL ***/
 
-.auth-modal--show {
+.modal--show {
     display: flex;
 }
 
-.auth-modal--hide  {
+.modal--hide  {
     display: none;
 }
 
-.auth-modal {
-    display: none;
+.modal {
+    display: flex;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    animation: fadeIn linear 0.2s;
 }
 
-.auth-modal__overlay {
+.modal__overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.auth-modal__body {
+
+.modal__body {
     z-index: 1;
     width: 400px;
     margin: auto;
     border-radius: 4px;
     background-color: white;
+    animation: growUp linear 0.2s;
 }
 
 .auth-form__header {
@@ -108,173 +120,3 @@ h3 {
     padding-bottom: 30px;
 }
 
-.auth-form__input {
-    width: 336px;
-    height: 40px;
-    margin-bottom: 30px;
-    padding-left: 18px;
-    border-width: 1px;
-    border-radius: 2px;
-    border-style: solid;
-    border-color: rgb(226, 226, 226);
-    font-size: 1.4rem;
-}
-
-.auth-form__input::placeholder {
-    color: rgb(226, 226, 226);
-    font-size: 1.4rem;
-}
-
-.auth-form__btn-submit {
-    width: 336px;
-    height: 40px;
-    margin-bottom: 30px;
-    border: none;
-    border-radius: 2px;
-    font-size: 1.4rem;
-    color: white;
-    background-color: var(--primary-color);
-    cursor: pointer;
-}
-
-.auth-form__btn-submit:hover {
-    background-color: var(--btn-hover-color);
-    animation: hoverChangeColor ease-in 0.2s;
-}
-
-.auth-form__sign-in-support {
-    display: flex;
-    justify-content: space-between;
-    margin-top: -20px;
-    margin-bottom: 10px;
-}
-
-.auth-form__sign-in-support p {
-    margin: 0px;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #05a;   
-}
-
-@keyframes hoverChangeColor {
-    from {
-        background-color: var(--primary-color);
-    }
-    to {
-        background-color: var(--btn-hover-color);
-    }
-}
-
-.auth-form__seperator {
-    margin-bottom: 22px;
-    text-align: center;
-    border-bottom: 1px solid rgb(200, 200, 200);
-    line-height: 0px;
-    color: rgb(200, 200, 200);
-    font-size: 1.3rem;
-}
-
-.auth-form__seperator span {
-    background-color: white;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-.auth-form__alt-auth {
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: -8px;
-    margin-right: -8px;
-}
-
-.auth-form__alt-btn {
-    display: flex;
-    height: 40px;
-    margin: 5px;
-    padding-left: 2px;
-    padding-right: 11px;
-    border-radius: 2px;
-    line-height: 40px;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: white;
-    cursor: pointer;
-}
-
-.auth-form__alt-btn:hover {
-    opacity: 0.95;
-}
-
-.auth-form__alt-btn:nth-child(1) {
-    background-color: #1877F2;;
-}
-
-.auth-form__alt-btn:nth-child(2) {
-    background-color: #4285F4;;
-}
-
-.auth-form__alt-btn:nth-child(3) {
-    background-color: black;
-}
-
-.auth-form__alt-icon-container {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.auth-form__alt-icon-container--right-margin {
-    margin-right: 8px;
-}
-
-.auth-form__alt-icon-container--white {
-    background-color: white;
-}
-
-.auth-form__alt-icon {
-    width: 22px;
-    height: 22px;
-    margin: auto;
-    background-image: url('../images/auth/icons.png');
-}
-
-.auth-form__alt-icon--facebook {
-    background-color: #1877F2;
-    background-size: 372% 232%;
-    background-position: 76.47058823529412% 15.151515151515152%;
-}
-
-.auth-form__alt-icon--google {
-    background-color: white;
-    background-size: 516.6666666666666% 322.22222222222223%;
-    background-position: 100% 100%;
-}
-
-.auth-form__alt-icon--apple {
-    background-color: black;
-    background-size: 290.625% 181.25%;
-    background-position: 8.19672131147541% 19.23076923076923%;
-}
-
-.auth-form__policy {
-    font-size: 1.1rem;
-    margin-top: 25px;
-    text-align: center;
-}
-
-.auth-form__policy-text-link {
-    color: var(--primary-color);
-}
-
-.auth-form__footer {
-    margin-bottom: 30px;
-    font-size: 1.4rem;
-    text-align: center;
-    color: rgb(150, 150, 150);
-}
-
-.auth-form__footer-text-link {
-    color: var(--primary-color);
-}
