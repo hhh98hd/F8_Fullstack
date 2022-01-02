@@ -1,4 +1,7 @@
 :root {
+    --header-height: 120px;
+    --header-navlist-height: 25px;
+    --header-search-height: calc(var(--header-height) - var(--header-navlist-height));
     --text-color: #333;
     --primary-color: #ee4d2d;
     --btn-hover-color: #f06347;
@@ -80,7 +83,6 @@ h3 {
 }
 
 .modal {
-    display: flex;
     position: absolute;
     top: 0;
     right: 0;
