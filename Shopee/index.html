@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
-
-    <script src="./assets/js/main.js"></script>
 </head>
 
 <body>
@@ -198,16 +196,28 @@
                     </a>
 
                     <div class="header__search-bar">
-                        <input type="text" class="header__search-input" placeholder="Tìm trong Shop này">
+                        <div class="header__search-input-wrapper">
+                            <input type="text" class="header__search-input" placeholder="Tìm trong Shop này">
+                            <div class="header__search-history">
+                                <div class="header__search-history-header">Lịch sử Tìm kiếm</div>
+    
+                                <ul class="header_search-history-list">
+                                    <li class="header__search-history-item">iuiu</li>
+                                    <li class="header__search-history-item">thuthu</li>
+                                    <li class="header__search-history-item">kaka</li>
+                                </ul>
+                            </div>
+                        </div>
+
                         <div class="header__search-select">
                             <span class="header__search-option">Trong Shop này</span>
                             <i class="header__arrow-down-icon fas fa-chevron-down"></i>
 
                             <ul class="header__search-option-list">
-                                <li class="header_search-option-item">Trong Shop này
+                                <li class="header__search-option-item">Trong Shop này
                                     <i class="header__search-option-icon fas fa-check"></i>
                                 </li>
-                                <li class="header_search-option-item">Trong Shopee
+                                <li class="header__search-option-item">Trong Shopee
                                     <i class="header__search-option-icon fas fa-check"></i>
                                 </li>
                             </ul>
@@ -215,17 +225,6 @@
 
                         <div class="header__search-button">
                             <i class="header__search-icon fas fa-search"></i>
-                        </div>
-
-                        <div class="header__search-history">
-                            <div class="header__search-history-header">
-
-                            </div>
-
-                            <ul class="header_search-history-list">
-                                <li class="header__search-history-item"></li>
-                                <li class="header__search-history-item"></li>
-                            </ul>
                         </div>
                     </div>
 
@@ -363,5 +362,7 @@
         </div>
     </div>
 </body>
+
+<script src="./assets/js/main.js"></script>
 
 </html>
