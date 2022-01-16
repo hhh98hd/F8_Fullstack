@@ -69,6 +69,7 @@
 }
 
 .header__qr {
+    z-index: 999;
     width: 186px;
     top: 150%;
     display: none;
