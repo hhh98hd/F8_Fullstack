@@ -1,0 +1,23 @@
+.note {
+    width: 240px;
+    min-width: 240px;
+    border-radius: 7px;
+    margin: 16px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.note > h1 {
+    margin-bottom: 6px;
+    font-size: 1.1em;
+    color: black;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.note > p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: black;
+}

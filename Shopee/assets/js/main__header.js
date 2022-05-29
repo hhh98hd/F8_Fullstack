@@ -1,10 +1,13 @@
 var curSearcMode = 'SHOP';
+var inCartCount = 0;
 
 const shopSearchOptItem = document.querySelector('.header__search-option-item:nth-child(1)');
 const webSearchOptItem = document.querySelector('.header__search-option-item:nth-child(2)');
 const curSearchSpan = document.querySelector('.header__search-option');
 
 shopSearchOptItem.children[0].classList.add('fa-check');
+shopSearchOptItem.addEventListener('click', onShophOptClicked);
+webSearchOptItem.addEventListener('click', onWebOptClicked);
 
 function onSearchOptClicked(opt)
 {
@@ -42,6 +45,3 @@ function onWebOptClicked()
 {
     onSearchOptClicked('WEB')
 }
-
-shopSearchOptItem.addEventListener('click', onShophOptClicked);
-webSearchOptItem.addEventListener('click', onWebOptClicked);

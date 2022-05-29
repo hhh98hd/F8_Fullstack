@@ -428,15 +428,34 @@
 }
 
 .header__cart {
+    position: relative;
     width: 150px;
     text-align: center;
+    cursor: pointer;
 }
 
 .header__cart-img {
     width: 26px;
 }
 
+.header__cart-list {
+    display: none;
+}
 
+.header__cart-list--empty {
+    width: 400px;
+    background-color: wheat;
+}
+
+.header__cart-empty-icon {
+    width: 108px;
+    height: 98px;
+    background-image: url(/assets/images/cart/cart-empty.png);
+    background-position-x: 50%;
+    background-position-y: center;
+    background-size: cover;  
+    background-repeat: no-repeat;
+}
 
 /****** MODAL *****/
 
