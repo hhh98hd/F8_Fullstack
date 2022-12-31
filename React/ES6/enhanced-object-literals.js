@@ -3,10 +3,7 @@ const arr = [
     ['age', 21], 
     ['address', 'Ha Noi']]
 
-const result = arr.reduce(function(obj, prop) {
-    obj[prop[0]] = prop[1];
-    return obj;
-}, {});
+const result = arr.reduce((obj, prop) => (obj[prop[0]] = prop[1], obj), {});
 
 console.log(result);
 // {
