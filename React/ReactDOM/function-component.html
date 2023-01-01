@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function PostItem() {
+            return (
+                <div>
+                    <h3 className='post__author'>Long Nguyen</h3>
+                    <h2 className='post__title'>Cách sử dụng Routing trong ReactJS</h2>
+                    <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/3796/62a83eb1bb7d9.jpg" alt="Please check Internet connection"></img>
+                    <p className='post__desc'>Hôm nay chúng ta sẽ cùng nhau tìm hiểu cách routing trong reactjs qua thư viện react-router-dom</p>
+                    <p className='post__publish-time'>7 tháng trước . 5 phút đọc</p>
+                </div>
+            )
+        }
+
+        const app = (
+            <div className='wrapper'>
+                <PostItem></PostItem>
+                <PostItem></PostItem>
+                <PostItem></PostItem>
+                <PostItem></PostItem>
+                <PostItem></PostItem>
+            </div>
+        );
+
+        ReactDOM.render(app, document.getElementById('root'));
+    </script>
+</body>
+</html>
